@@ -60,15 +60,27 @@
           </nav>
 
           <!-- Main header -->
-          <header>
-               <!-- First replaceble image -->
-               <img class="img-absolute" src="img/city.png" alt="City 1">
-               <div class="wrapper astonish animated fadeInDown">
-                    <h1><strong>tele</strong>ga</h1>
-                    <h2>A company offering solutions for creating Telegram bots<br>
-                    We bring your ideas to life and take your business to the next level</h2>
-               </div>
-          </header>
+          <header style="position: relative; width: 100vw; min-height: 600px; overflow: hidden;">
+    <img id="city-img"
+         src="img/city.png"
+         alt="City 1"
+         style="width: 100vw; height: 100vh; object-fit: cover; display: block; min-height: 600px; max-height: 1100px;">
+    <div id="header-overlay"
+         style="position: absolute; left:0; top:0; width:100vw; height:100vh; min-height:600px; max-height:1100px; pointer-events: none; z-index:2;">
+        <h1 id="text"
+            style="position: absolute; top:43%; left:50%; transform:translate(-50%, -50%); color: #fff; font-size:6vw; text-align:center; width:100%; pointer-events: none;">
+            Telega
+        </h1>
+        <div id="light"></div>
+        <h2 style="position: absolute; top:54%; left:50%; transform:translate(-50%, 0); color:#fff; text-align: center; width:90%; font-size:1.7vw; pointer-events:none;">
+            A company offering solutions for creating Telegram bots<br>
+            We bring your ideas to life and take your business to the next level
+        </h2>
+    </div>
+</header>
+
+
+
 
           <!-- Main content -->
           <main>
@@ -88,41 +100,55 @@
                
 
                <div id="reserve" class="content-wrapper-lg text-center astonish" data-animation="zoomIn">
-    <div class="wrap" style="margin-top: 40px;">
-        <!-- Левая карта с контентом -->
-        <div class="card" style="--clr: #0f0;">
-            <div class="card-content">
-                <h2 class="section-title">Do you heart about telegram?</h2>
-                <p>Telegram is one of the world’s fastest-growing platforms, trusted for its speed, security, and flexibility. For businesses, Telegram enables instant customer communication, powerful automation with bots, and unlimited channels for audience engagement—all in a secure and user-friendly environment.</p>
-                <a href="https://telegram.org/?setln=en" class="btn btn-outline-purple">Go to telegram</a>
+  <div class="wrap" style="margin-top: 40px;">
+    <!-- Левая карта с контентом -->
+    <div class="card" style="--clr: #0f0;">
+      <div class="card-content">
+        <h2 class="section-title">Do you heart about telegram?</h2>
+        <p>
+          Telegram is one of the world’s fastest-growing platforms, trusted for its speed, security, and flexibility.
+          For businesses, Telegram enables instant customer communication, powerful automation with bots, and unlimited channels for audience engagement—all in a secure and user-friendly environment.
+        </p>
+        <a href="https://telegram.org/?setln=en" class="btn btn-outline-purple">Go to telegram</a>
+      </div>
+    </div>
+    <!-- Правая карта с ботами -->
+    <div class="card card-bots" style="--clr: #f0f;">
+      <div class="card-content">
+        <h2 class="section-title">WHAT BOTS WE CREATE</h2>
+        <div class="bots-list">
+          <div class="bot-item">
+            <span class="bot-icon"><i class="fa fa-headphones"></i></span>
+            <div class="bot-text">
+              <span class="bot-title">Support Bot</span>
+              <span class="bot-desc">Online help, fast answers 24/7.</span>
             </div>
+          </div>
+          <div class="bot-item">
+            <span class="bot-icon"><i class="fa fa-shopping-cart"></i></span>
+            <div class="bot-text">
+              <span class="bot-title">Shop Bot</span>
+              <span class="bot-desc">Product showcase, payments, orders.</span>
+            </div>
+          </div>
+          <div class="bot-item">
+            <span class="bot-icon"><i class="fa fa-cogs"></i></span>
+            <div class="bot-text">
+              <span class="bot-title">AI Chat Bot</span>
+              <span class="bot-desc">Smart replies powered by AI.</span>
+            </div>
+          </div>
+          <div class="bot-item bot-custom">
+            <span class="bot-icon bot-custom-icon"><i class="fa fa-bullhorn"></i></span>
+            <div class="bot-text">
+              <span class="bot-title">Custom Bot</span>
+              <span class="bot-desc">We develop a unique solution for your business and needs.</span>
+            </div>
+          </div>
         </div>
-        <!-- Правая пустая карта -->
-        <div class="card" style="--clr: #f0f;">
-            <div class="card-content">
-  <h2 class="section-title">What Bots We Create</h2>
-  <div class="bots-list">
-    <div class="bot-item">
-      <span class="bot-icon"><i class="fa fa-headphones"></i></span>
-      <span><strong>Support Bot</strong><br><small>Online help, fast answers 24/7.</small></span>
-    </div>
-    <div class="bot-item">
-      <span class="bot-icon"><i class="fa fa-shopping-cart"></i></span>
-      <span><strong>Shop Bot</strong><br><small>Product showcase, payments, orders.</small></span>
-    </div>
-    <div class="bot-item">
-      <span class="bot-icon"><i class="fa fa-cogs"></i></span>
-      <span><strong>AI Chat Bot</strong><br><small>Smart replies powered by AI.</small></span>
-    </div>
-    <div class="bot-item">
-      <span class="bot-icon"><i class="fa fa-bullhorn"></i></span>
-      <span><strong>Broadcast Bot</strong><br><small>Mass messages and notifications.</small></span>
+      </div>
     </div>
   </div>
-</div>
-
-        </div>
-    </div>
 </div>
 
 
@@ -206,6 +232,63 @@
     }
 });
 </script>
+
+<script>
+const cityImg = document.getElementById('city-img');
+const text = document.getElementById('text');
+const light = document.getElementById('light');
+
+// Для ресайза/адаптивности
+function getCoords(elem) {
+    const box = elem.getBoundingClientRect();
+    return {
+        left: box.left + window.scrollX,
+        top: box.top + window.scrollY
+    };
+}
+
+cityImg.addEventListener('mousemove', function(event) {
+    let rect = cityImg.getBoundingClientRect();
+    let mouseX = event.clientX - rect.left;
+    let mouseY = event.clientY - rect.top;
+
+    // Свет двигается только внутри картинки
+    light.style.left = mouseX + 'px';
+    light.style.top = mouseY + 'px';
+    light.style.opacity = 0.85;
+
+    // Центр текста относительно картинки
+    let textRect = text.getBoundingClientRect();
+    let centerX = textRect.left - rect.left + text.offsetWidth / 2;
+    let centerY = textRect.top - rect.top + text.offsetHeight / 2;
+
+    let distanceX = mouseX - centerX;
+    let distanceY = mouseY - centerY;
+
+    // Приятная мягкая тень
+let newShadow = '';
+for(let i = 0; i < 28; i++){ // меньше слоёв
+    let shadowX = - distanceX * (i / 28);
+    let shadowY = - distanceY * (i / 28);
+    let blur = 7 + i * 2.4; // больше blur
+    let opacity = 0.09 - (i / 90); // меньше начальная прозрачность
+    newShadow += (newShadow ? ',' : '') +
+        `${shadowX}px ${shadowY}px ${blur}px rgba(86, 177, 232, ${opacity})`;
+}
+text.style.textShadow = newShadow;
+
+});
+
+cityImg.addEventListener('mouseleave', ()=>{
+    light.style.opacity = 0;
+    text.style.textShadow = "none";
+});
+cityImg.addEventListener('mouseenter', ()=>{
+    light.style.opacity = 0.85;
+});
+</script>
+
+
      
      </body>
 </html>
