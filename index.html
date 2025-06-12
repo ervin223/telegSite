@@ -85,11 +85,25 @@
                     </div>
                </div>
 
+               
+
                <div id="reserve" class="content-wrapper-lg text-center astonish" data-animation="zoomIn">
-                    <h2 class="section-title">Do you heart about telegram?</h2>
-                    <p>Telegram is one of the world’s fastest-growing messaging platforms, trusted by millions for its speed, security, and flexibility. For businesses, Telegram offers unique opportunities: instant communication with customers, automation through powerful bots, seamless integration with other services, and unlimited channels and groups for audience engagement. With its robust privacy features and open API, Telegram makes it easy for any business to reach new clients, boost sales, and streamline operations—all in a secure, user-friendly environment.</p>
-                    <a href="https://telegram.org/?setln=en" class="btn btn-outline-purple">Go to telegram</a>
-               </div>
+    <div class="wrap" style="margin-top: 40px;">
+        <!-- Левая карта с контентом -->
+        <div class="card" style="--clr: #0f0;">
+            <div class="card-content">
+                <h2 class="section-title">Do you heart about telegram?</h2>
+                <p>Telegram is one of the world’s fastest-growing platforms, trusted for its speed, security, and flexibility. For businesses, Telegram enables instant customer communication, powerful automation with bots, and unlimited channels for audience engagement—all in a secure and user-friendly environment.</p>
+                <a href="https://telegram.org/?setln=en" class="btn btn-outline-purple">Go to telegram</a>
+            </div>
+        </div>
+        <!-- Правая пустая карта -->
+        <div class="card" style="--clr: #f0f;">
+            
+        </div>
+    </div>
+</div>
+
 
                <div class="content-wrapper" id="contact">
                     <!-- Third replaceble image -->
@@ -159,5 +173,18 @@
           <script src="js/astonish.js" charset="utf-8"></script>
           <script src="js/nav.js" charset="utf-8"></script>
           <script src="js/scroll.js" charset="utf-8"></script>
+          <script>
+               let cards = document.querySelectorAll(".card");
+
+               cards.forEach(card => {
+                    card.onmousemove = function(e){
+               let x = e.pageX - card.getBoundingClientRect().left - window.scrollX;
+               let y = e.pageY - card.getBoundingClientRect().top - window.scrollY;
+               card.style.setProperty('--x', x + 'px');
+               card.style.setProperty('--y', y + 'px');
+    }
+});
+</script>
+     
      </body>
 </html>
