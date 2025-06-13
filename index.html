@@ -190,7 +190,7 @@
                </div>
 
                <!-- This is an embedded Google map, this is easily customizable especially if you get a Google API key, this will allow for more customizable features. -->
-               <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14881.541560960735!2d24.744127320971963!3d59.440506880038754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929499df5616bf%3A0x400b36d18fc6270!2sTallinn!5e0!3m2!1sen!2see!4v1749649766444!5m2!1sen!2see" frameborder="0" style="border:0" allowfullscreen></iframe>
+               <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8598.432783977187!2d24.750909443707616!3d59.4337405022365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294a07b008951%3A0xe89e3f01a393657c!2sMaakri%2C%20Tallinn!5e0!3m2!1sen!2see!4v1749827661104!5m2!1sen!2see" frameborder="0" style="border:0" allowfullscreen></iframe>
           </main>
 
           <!-- Main footer -->
@@ -287,6 +287,30 @@ cityImg.addEventListener('mouseenter', ()=>{
     light.style.opacity = 0.85;
 });
 </script>
+
+<script>
+document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const firstName = this.firstName.value;
+    const lastName = this.lastName.value;
+    const email = this.email.value;
+    const message = this.message.value;
+
+    const response = await fetch('http://localhost:3000/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstName, lastName, email, message })
+    });
+
+    const result = await response.json();
+    alert(result.message);
+    this.reset();
+});
+     
+</script>
+
+
 
 
      
