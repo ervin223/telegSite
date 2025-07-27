@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "Meist",
+    "telegram": "Telegram",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "title": "Telega",
+    "description1": "Ettevõte, mis pakub lahendusi Telegrami botide loomiseks",
+    "description2": "Viime teie ideed ellu ja viime äri järgmisele tasemele"
+  },
+  "about": {
+    "title": "Telega kohta",
+    "text1": "Telega on järgmise põlvkonna ettevõte, mis on pühendunud võimsate ja intelligentsete Telegrami botide loomisele, kasutades kõige uuenduslikumaid tehnoloogiaid turul.",
+    "text2": "Meie ekspertide meeskond muudab iga idee nutikaks ja kasutajasõbralikuks botiks — aidates automatiseerida protsesse, kaasata publikut ja kasvatada äri.",
+    "text3": "Telegaga saate tipptasemel kvaliteedi, kiire arenduse ja parimad hinnad — kõik ühes kohas."
+  },
+  "reserve": {
+    "title": "Kas oled kuulnud Telegramist?",
+    "text": "Telegram on üks maailma kiiremini kasvavaid platvorme, mida usaldatakse kiiruse, turvalisuse ja paindlikkuse pärast. Äride jaoks pakub Telegram kohest suhtlust klientidega, võimsaid botte automatiseerimiseks ning piiramatu arvu kanaleid publiku kaasamiseks — kõik turvalises ja kasutajasõbralikus keskkonnas.",
+    "button": "Mine Telegrami"
+  },
+  "bots": {
+    "title": "MIS BOTTID ME LOOME:",
+    "support": {
+      "title": "Tugibot",
+      "desc": "Online abi ja kiired vastused ööpäevaringselt."
+    },
+    "shop": {
+      "title": "Poe bot",
+      "desc": "Toodete esitlemine, maksed ja tellimused."
+    },
+    "ai": {
+      "title": "AI vestlusbot",
+      "desc": "Targad vastused tehisintellekti toel."
+    },
+    "custom": {
+      "title": "Kohandatud bot",
+      "desc": "Arendame unikaalse lahenduse vastavalt teie ärile ja vajadustele."
+    }
+  },
+  "contact": {
+    "title": "Võtke meiega ühendust oma projekti elluviimiseks",
+    "firstName": "Eesnimi:",
+    "lastName": "Perekonnanimi:",
+    "email": "Email:",
+    "message": "Sõnum:",
+    "send": "Saada"
+  },
+  "footer": {
+    "copyright": "Telega Solutions 2025"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "About us",
+    "telegram": "Telegram",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "Telega",
+    "description1": "A company offering solutions for creating Telegram bots",
+    "description2": "We bring your ideas to life and take your business to the next level"
+  },
+  "about": {
+    "title": "About Telega",
+    "text1": "Telega is a next-generation company dedicated to building powerful, intelligent Telegram bots using the most innovative and advanced technologies on the market.",
+    "text2": "Our expert team turns any idea into a smart, user-friendly bot—helping you automate processes, engage your audience, and grow your business.",
+    "text3": "With Telega, you get premium quality, lightning-fast delivery, and unbeatable prices—all in one place."
+  },
+  "reserve": {
+    "title": "Do you heart about telegram?",
+    "text": "Telegram is one of the world’s fastest-growing platforms, trusted for its speed, security, and flexibility. For businesses, Telegram enables instant customer communication, powerful automation with bots, and unlimited channels for audience engagement—all in a secure and user-friendly environment.",
+    "button": "Go to telegram"
+  },
+  "bots": {
+    "title": "WHAT BOTS WE CREATE:",
+    "support": {
+      "title": "Support Bot",
+      "desc": "Online help, fast answers 24/7."
+    },
+    "shop": {
+      "title": "Shop Bot",
+      "desc": "Product showcase, payments, orders."
+    },
+    "ai": {
+      "title": "AI Chat Bot",
+      "desc": "Smart replies powered by AI."
+    },
+    "custom": {
+      "title": "Custom Bot",
+      "desc": "We develop a unique solution for your business and needs."
+    }
+  },
+  "contact": {
+    "title": "Contact us to bring your project to life",
+    "firstName": "First Name:",
+    "lastName": "Last Name:",
+    "email": "Email:",
+    "message": "Message:",
+    "send": "Send"
+  },
+  "footer": {
+    "copyright": "Telega Solutions 2025"
+  }
+}
